@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="null">
+  <head>
+    <meta charset="utf-8">
+    <title>Альбом</title>
+    <meta content="group#4" name="author">
+    <meta content="Photoalbum 2017 by Loftschool Web-Advanced" name="description">
+    <meta content="Photoalbum, group#4" name="keywords">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta content="ie=edge" http-equiv="x-ua-compatible">
+    <link rel="stylesheet" href="./assets/css/foundation.css">
+    <link rel="stylesheet" href="./assets/css/app.css"><!--[if lt IE 9]>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script><![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header header--album">
+        <div class="header__main">
+          <div class="user user--mini">
+            <div class="user__logo"></div>
+            <h3 class="user__name">Имя Фамилия</h3>
+          </div>
+          <div class="albums-header">
+            <h1 class="albums-header__title">Лесные прогулки</h1>
+            <h5 class="albums-header__description">
+              Фотографии природы, леса, енотов и оленей. Как прекрасно сойти на
+              дальней станции и пройтись по полю босиком. И чтобы никто не беспокоил
+              бродить влюбленным в тишину. Запах меда, лесных оленей и енотов будоражит
+              утро
+            </h5>
+          </div>
+          <div class="controls"><a class="button button--menu button--home" href="./index.html">Вернуться</a><a class="button button--menu button--edit" id="albumHeaderEditButton" href="#">Редактировать</a></div>
+        </div>
+        <div class="header__bottom">
+          <div class="albums-stat">
+            <ul class="albums-stat__list">
+              <li class="albums-stat__item"><span class="albums-stat__count" id="albumStatPhotosCount">18</span><span class="albums-stat__text" id="albumStatPhotosText">Фотографий</span></li>
+              <li class="albums-stat__item"><span class="albums-stat__count" id="albumStatLikesCount">12</span><span class="albums-stat__text" id="albumStatLikesText">Лайков</span></li>
+              <li class="albums-stat__item"><span class="albums-stat__count" id="albumStatCommentsCount">4</span><span class="albums-stat__text" id="albumStatCommentsText">Комментария</span></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container">
+        <section class="photos">
+          <ul class="photos__list">
+            <li class="photos__item">
+              <section class="photos__section"><a class="photos__image-link" href="#"><img class="photos__image-img" src="./assets/img/new_content_image.jpg" alt="Путешествие на лодке по озеру">
+                  <div class="photos__stat photos__stat--album"><span class="photos__stat-text icon-comments">10</span><span class="photos__stat-text icon-like">20</span></div></a>
+                <div class="photos__footer photos__footer--album"><a class="photos__photo-edit" href="./album.html"></a>
+                  <h4 class="photos__photo-title">Прогулки по воде</h4>
+                </div>
+              </section>
+            </li>
+            <li class="photos__item">
+              <section class="photos__section"><a class="photos__image-link" href="#"><img class="photos__image-img" src="./assets/img/new_content_image.jpg" alt="Путешествие на лодке по озеру">
+                  <div class="photos__stat photos__stat--album"><span class="photos__stat-text icon-comments">10</span><span class="photos__stat-text icon-like">20</span></div></a>
+                <div class="photos__footer photos__footer--album"><a class="photos__photo-edit" href="./album.html"></a>
+                  <h4 class="photos__photo-title">Прогулки по воде</h4>
+                </div>
+              </section>
+            </li>
+            <li class="photos__item">
+              <section class="photos__section"><a class="photos__image-link" href="#"><img class="photos__image-img" src="./assets/img/new_content_image.jpg" alt="Путешествие на лодке по озеру">
+                  <div class="photos__stat photos__stat--album"><span class="photos__stat-text icon-comments">10</span><span class="photos__stat-text icon-like">20</span></div></a>
+                <div class="photos__footer photos__footer--album"><a class="photos__photo-edit" href="./album.html"></a>
+                  <h4 class="photos__photo-title">Прогулки по воде</h4>
+                </div>
+              </section>
+            </li>
+            <li class="photos__item">
+              <section class="photos__section"><a class="photos__image-link" href="#"><img class="photos__image-img" src="./assets/img/new_content_image.jpg" alt="Путешествие на лодке по озеру">
+                  <div class="photos__stat photos__stat--album"><span class="photos__stat-text icon-comments">10</span><span class="photos__stat-text icon-like">20</span></div></a>
+                <div class="photos__footer photos__footer--album"><a class="photos__photo-edit" href="./album.html"></a>
+                  <h4 class="photos__photo-title">Прогулки по воде</h4>
+                </div>
+              </section>
+            </li>
+          </ul>
+        </section>
+      </div>
+      <footer class="footer">
+        <div class="footer__bg"></div>
+        <div class="footer__col-left">Перед Вами сервис, который поможет Вам организовать свои фотографии в альбомы и поделиться ими со всем миром!</div>
+        <div class="footer__col-center"><a class="footer__arrow icon-top" id="arrowUp" href="#"></a></div>
+        <div class="footer__col-right">2017 | Создано командой профессионалов на продвинутом курсе по веб-разработке от Loftschool</div>
+      </footer>
+      <div class="modal modal--add-photos" id="modalAddPhotos">
+        <section class="modal__content">
+          <header class="modal__header">
+            <h3 class="modal__heading">Добавить фотографии</h3><a class="modal__close icon-close" id="modalClose" href="#"></a>
+          </header>
+          <div class="modal__main">
+            <div class="modal__album-title">
+              <p class="modal__label">Название</p>
+              <h4 class="modal__text modal__album-heading">Как я провел лето</h4>
+            </div>
+            <form class="dropzone" id="dropzone" method="post">
+              <div class="dropzone__add"><i class="dropzone__icon icon-cam"></i>
+                <div class="dropzone__text modal__text"> <span>Перетащите фото сюда или</span>
+                  <label class="button button--cancel" for="modalAddImageInput">выберите файл</label>
+                  <input class="hidden__input" id="modalAddImageInput" type="file" multiple="multiple" name="image-files" accept="image/jpeg,image/png">
+                </div>
+              </div>
+              <div class="dropzone__files">
+                <ul class="dropzone__files-list">
+                  <li class="dropzone__files-item"><a class="dropzone__files-remove" href="#"></a></li>
+                  <li class="dropzone__files-item"><a class="dropzone__files-remove" href="#"></a></li>
+                  <li class="dropzone__files-item"><a class="dropzone__files-remove" href="#"></a></li>
+                  <li class="dropzone__files-item"><a class="dropzone__files-remove" href="#"></a></li>
+                  <li class="dropzone__files-item"><a class="dropzone__files-remove" href="#"></a></li>
+                  <li class="dropzone__files-item"><a class="dropzone__files-remove" href="#"></a></li>
+                </ul>
+              </div>
+            </form>
+            <p class="modal__error">Выбран неверный формат изображений. Попробуйте снова</p>
+          </div>
+          <footer class="modal__footer"><a class="modal__footer-link button button--confirm" id="modalAlbumAddSave" href="#">Сохранить</a><a class="modal__footer-link button button--cancel" id="modalAlbumAddCancel" href="#">Отменить</a>
+          </footer>
+        </section>
+      </div>
+      <div class="modal modal--edit-photo" id="modalEditPhoto">
+        <section class="modal__content">
+          <header class="modal__header">
+            <h3 class="modal__heading">Редактировать фотографию</h3><a class="modal__close icon-close" id="modalClose" href="#"></a>
+          </header>
+          <div class="modal__main">
+            <form class="photo-edit" id="photoEdit" method="post">
+              <div class="modal__form-row">
+                <label class="modal__label">Название</label>
+                <input class="modal__input-text" id="photoName" type="text" name="photo-name" placeholder="Домик в лесу">
+              </div>
+              <div class="modal__form-row">
+                <label class="modal__label">Описание</label>
+                <textarea class="modal__input-textarea" id="photoDescription" name="photo-description" rows="5" placeholder="Описание фотографии может быть с #хэштегами.
+Чтобы было красиво, описание может быть на несколько строк.
+Убедитесь сами!"></textarea>
+              </div>
+            </form>
+            <form class="photo-delete" id="photoDelete" method="post">
+              <p class="modal__text">Вы хотите удалить это фото?</p><a class="button button--red" href="#">Да</a><a class="button button--cancel" href="#">Отменить</a>
+            </form>
+          </div>
+          <footer class="modal__footer"><a class="modal__footer-link button button--confirm" id="modalPhotoSave" href="#">Сохранить</a><a class="modal__footer-link button button--cancel" id="modalPhotoCancel" href="#">Отменить</a>
+            <div class="modal__footer-link-wrapper"><a class="modal__footer-link modal__footer-link--delete button button--delete" id="modalPhotoDelete" href="#">Удалить</a></div>
+          </footer>
+        </section>
+      </div>
+      <div class="modal modal--uploaded" id="modalUploded">
+        <section class="modal__content">
+          <div class="modal__main">
+            <div class="modal__label">Файлы были загружены</div>
+          </div>
+          <footer class="modal__footer"><a class="modal__footer-link button button--close" id="modalClose" href="#">Закрыть</a>
+          </footer>
+        </section>
+      </div>
+    </div>
+    <script src="./assets/js/foundation.js" defer></script>
+    <script src="./assets/js/app.js" defer></script>
+  </body>
+</html>
